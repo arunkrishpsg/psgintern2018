@@ -1,4 +1,4 @@
-# psgintern2018
+# Internship @ PSG Software Technologies (Academic Year: 2018 - 19)
 Assessments for internship at PSG Software Technologies for the period Dec 2018 till May 2019
 
 ## Programming Aptitude
@@ -18,6 +18,8 @@ String obfuscate(String input, Integer charOffset, Map<String, String> wordMap);
 ```
 
 ### 2. Implement the following interface
+
+```Java
 /**
 * Rainfall Capture
 * Captures rainfall in each region based on pincode and date of rainfall. Gives average, minimum and maximum rainfall in the given date range. Amount of rainfall is indicated in cm, date is represented in DD-MM-YYYY format
@@ -26,6 +28,36 @@ String obfuscate(String input, Integer charOffset, Map<String, String> wordMap);
 */
 
 interface RainfallCalculator {
+  /**
+  * Captures rain occured in the given region
+  * @param measure amount of rainfall in centi meters
+  * @param rainDate date on which rainfall measure is recorded
+  * @param pincode identifies the location of rainfall where this was recorded
+  */
+  void captureRain(Float measure, Date rainDate, String pincode);
   
-  void captureRain(Float measure, 
+  /**
+  * Region which has gt maximum rainfall in the given . If more than 1 region got the same maximum, then return whichever has got the rain recently.  If both have got the rain on the same date, return whichever was captured first
+  */
+  RainfallRegion getRegionWithMaxRainfall(Date fromDate, Date toDate);
+  
+  /**
+  * Similar to above, but which region has got minimum rainfall
+  */
+  RainfallRegion getRegionWithMinRainfall(Date fromDate, Date toDate);
+  
+  /**
+  * Compute the average rainfall in the given date range and return the average
+  */
+  Float getAverageRainfall(Date fromDate, Date fromDate);
 }
+```
+
+For the above problem assume that you have the following class defined. Feel free to create as many classes as you want to solve the above problem
+
+```Java
+class RainfallRegion {
+  String pincode;
+  Float measure;
+}
+```
