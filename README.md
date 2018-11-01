@@ -82,3 +82,7 @@ Once the bus is selected, system admin can collect the payment to confirm the bo
 For the return trip too, a similar approach can be followed.
 
 DO NOT have to implement any login screen as the system will leverage the single-sign-on server.
+
+## Procedure to upload your solution
+Create a github account and add your individual source code in that repository. Send us an email to support@psgsoftwaretechnologies.com wih the link to your github repository along with your roll number and name.
+
