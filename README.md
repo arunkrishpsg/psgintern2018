@@ -61,3 +61,24 @@ class RainfallRegion {
   Float measure;
 }
 ```
+
+## Object Oriented Analysis and Design
+
+### 1. Student Trip Planner
+Analyze the below mentioned system requirements and come up with an system design and to be specific object oriented design identifying Entities, States / Properties and behaviour
+
+Assume that you have read only access to student database containing their basic information and all the information about the student that you need for this system. Whenever there is a vacation, students in hostel have to book tickets to and from their home town. This student trip planner, helps in bringing co-located students (students in same city) together to collaborate and schedule their trip.
+
+System's admin maintain data about transport agencies, their buses and cost. They also create / maintain vacations as per the acadmic calendar. Sets-up reminder / notification to student for various process steps.
+
+A trip plan starts by  creation of a trip in the system specifying their destination date, time and place.  The student who is creating a trip, can invite his / her friends to join the trip. Students in the same place gets notified about a new trip being created and they join the trip by opting for it.
+
+One week before the start date for vacation, system admin gets a regionwise report showing how many students have joined together for a trip to a particular destination.
+
+System admin, can launch a poll to choose the bus or choose the time to leave.
+
+Once the bus is selected, system admin can collect the payment to confirm the booking and update their payment status.
+
+For the return trip too, a similar approach can be followed.
+
+DO NOT have to implement any login screen as the system will leverage the single-sign-on server.
